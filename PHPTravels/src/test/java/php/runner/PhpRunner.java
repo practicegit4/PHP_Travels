@@ -15,11 +15,11 @@ public class PhpRunner {
 			"html:target/cucumber-htmlreport", "json:target/cucumber-report.json","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
 
 	@Test
-	public class PhpRunner extends AbstractTestNGCucumberTests {
+	public class phprunner extends AbstractTestNGCucumberTests {
 
 		@AfterClass
 		public static void writeExtentReport() {
-			Reporter.loadXMLConfig(new File("ConfigReport/LoginReport.xml"));
+			Reporter.loadXMLConfig(new File("Config/LoginReport.xml"));
 
 		}
 	}
