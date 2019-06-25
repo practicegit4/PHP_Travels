@@ -5,18 +5,21 @@ import org.openqa.selenium.support.FindBy;
 
 public class PhpLoginElements {
 
-	//UserName
-	@FindBy(name="username")
+	
+
+
+	
+	
+	//username
+	@FindBy(xpath = "//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[1]/input")
 	public WebElement username;
 	
-	//Password
-	@FindBy(name = "password")
-	public WebElement password;
-
+	//password
+	@FindBy(xpath = "//*[@id=\"loginfrm\"]/div[1]/div[5]/div/div[2]/input")
+	public WebElement Password;
+	
 	//Login Button
-	@FindBy(xpath = "//*[@id=\"loginfrm\"]/button")
-	public WebElement loginButton;
-	
-	
+		@FindBy(xpath = "//*[@id=\"loginfrm\"]/button")
+		public WebElement loginButton;
 	
 }
