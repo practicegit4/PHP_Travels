@@ -30,10 +30,45 @@ public class PhpLoginStepDef {
 
 	@Then("^I should be able to login$")
 	public void i_should_be_able_to_login()  {
-		Assert.assertEquals(loginActions.phpLoginPage(), true);
+		Assert.assertEquals(loginActions.phpLoginPage(), false);
+	    
+	}
+	
+	@Given("^I navigated to Php homepage$")
+	public void i_navigated_to_Php_homepage() {
+		loginActions.HomePage();
 	    
 	}
 
+	@When("^I click hotels button$")
+	public void i_click_hotels_button()  {
+	    loginActions.Hotels();
+	}
 
+	@When("^I put city name$")
+	public void i_put_city_name(String cityname) {
+	    loginActions.CityName(cityname);
+	}
+
+	@When("^I put check in$")
+	public void i_put_check_in(String checkin) {
+		loginActions.CheckIn(checkin); 
+	}
+
+	@When("^I put check out$")
+	public void i_put_check_out()  {
+		loginActions.CheckOut();
+	}
+
+	@When("^I click on search button$")
+	public void i_click_on_search_button()  {
+		loginActions.Search(); 
+	}
+
+	@Then("^I should be able to find hotels chart\\.$")
+	public void i_should_be_able_to_find_hotels_chart() {
+	   
+
+	}
 
 }

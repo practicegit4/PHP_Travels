@@ -1,11 +1,13 @@
 package php.actions;
 
+import org.openqa.selenium.By.ByXPath;
 import org.openqa.selenium.support.PageFactory;
 
 import php.elements.PhpLoginElements;
 import php.utilities.PhpDriverSetup;
 
 public class PhpLoginActions {
+	
 	
 	PhpLoginElements loginTest;
 	
@@ -35,6 +37,39 @@ public class PhpLoginActions {
 		
 	}
 	
+      public String HomePage() {
+    	 PhpDriverSetup.driver.get("https://www.phptravels.net");
+  		String title = PhpDriverSetup.driver.getTitle();
+  		return title;
+		
+      }
+	
+	
+	
+	public void Hotels () {
+		loginTest.HotelButton.click();
+		
+	}
+	
+	public void CityName(String cityname) {
+
+		loginTest.CityName.sendKeys(cityname);
+	
+	}
+		public void CheckIn (String checkin) {
+			loginTest.CheckIn.sendKeys(checkin);
+			
+		}
+		public void CheckOut() {
+			loginTest.CheckOut.sendKeys();
+		}
+		
+		public void Search() {
+			loginTest.Search.click();
+		}
+		
+		
+	}
 	
 
-}
+

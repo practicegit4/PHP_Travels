@@ -11,11 +11,11 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.testng.AbstractTestNGCucumberTests;
 
 public class PhpRunner {
-	@CucumberOptions(features = { "FeatureFiles" }, glue = { "php.stepdef", "php.utilities" }, plugin = { "pretty",
+	@CucumberOptions(features = { "FeatureFiles" }, tags = {"@PP" }, glue = { "php.stepdef", "php.utilities" }, plugin = { "pretty",
 			"html:target/cucumber-htmlreport", "json:target/cucumber-report.json","com.cucumber.listener.ExtentCucumberFormatter:target/cucumber-reports/report.html" }, monochrome = true)
 
 	@Test
-	public class phprunner extends AbstractTestNGCucumberTests {
+	public static class phprunner extends AbstractTestNGCucumberTests {
 
 		@AfterClass
 		public static void writeExtentReport() {
